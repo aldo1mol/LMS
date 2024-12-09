@@ -11,11 +11,10 @@
 
 <!-- Loader Page -->
 
+<!-- Loader Page -->
 <div id="loader">
     <img src="img/logo.png">
-    <div id="progress-container">
-        <div id="progress-bar"></div>
-    </div>
+    <img class="loading" src="img/loading.gif" alt="loading">
     <p>Loading...</p>
 </div>
 
@@ -33,29 +32,33 @@
                     <header><img src="img/logo.png" alt="logo"></header>
 
 
-                      <div class="input-box">
-                        
+                      <form class="input-box">
+                       
                         <div class="input-field">
                             <input type="text" name="email" class="input" id="email" required autocomplete="off">
                             <label for="email">Email</label>
                         </div>
                         <div class="input-field">
                             <input type="text" name="password" class="input" id="password" required autocomplete="off">
-                            <label for="Password">Password</label>
+                            <label for="Password">New Password</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="password" class="input" id="password" required autocomplete="off">
+                            <label for="Password">Confirm Password</label>
                         </div>
                           <center>
-                            <a class="btn  mt-3 w-100 mb-3" href="main.html">log in</a>     
-                            <span class="create-account mt-5">Don't have an account? <a href="account.html">Create account here</a></span> <br>  
-                            <span class="create-account mt-5">Don't remember password?<a href="forgot_pass.html">Forgot Password</a></span>   
-
-                        </center>
+                            <a class="btn  mt-3 w-100 mb-3" href="#">Change Password</a>     
+                            <span class="create-account mt-5">Dont have an account? <a href="account.html">Create account here</a></span> 
+                            <span class="create-account mt-5">Already have an account? <a href="index.html">login</a></span>   
+  
+                          </center>
                                             
                         
-                      </div>
+                        </form>
                 </div>
             </div>
         </div>
     </div>
-<script src="js/main.js"></script>
+<script src="js/loading.js"></script>
 </body>
 </html>
