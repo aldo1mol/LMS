@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: "Poppins", serif;
+    // font-weight: 100;
+    font-style: normal;
+  }
+
+  html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/pic3.jpg'); /* Your background image */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    height: 100%;
+    min-height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    overflow-x: hidden;
+
+
+    /* Loader Styling */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    .loading{
+        width: 100px;
+    }
+    img{
+        width: 250px;
+        margin: auto;
+        margin-bottom: 50px;
+        margin-top: 10px;
+   }
+
+    #progress-container {
+        width: 80%;
+        height: 10px;
+        background: #e0e0e0;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        
+
+        #progress-bar {
+            width: 0;
+            height: 100%;
+            background: rgb(194, 134, 24);
+            transition: width 0.3s ease;
+        }
+    }
+}
+
+
+
+
+   
+    
+    .wrapper{
+        // background: #ececec;
+        padding: 50px 20px 0 20px;
+        
+        
+
+       
+
+        .main{
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+
+            .row{
+                width: 900px;
+                height: 550px;
+                border-radius: 10px;
+                background: #fff;
+                box-shadow: 5px 5px 10px 1px rgb(194, 134, 24);
+
+                .side-image{
+                    background-image: url(../img/pic2.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    
+                    .text{
+                        color: rgb(194, 134, 24);
+                        font-weight: 700;
+                        margin-top: 180px;
+                        font-size: 30px;
+                        text-align: center;
+                        background-color: rgba(0, 0, 0, 0.7);
+                        padding: 10px;
+                        border-radius: 5px;
+                    }
+
+                    @media only screen and (max-width: 768px){
+                        .text{
+                            margin-top: 20px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                .right{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    header{
+                        padding: 30px;
+                        img{
+                            width: 200px;
+                        }
+                    }
+
+                    .input-box{
+                        width: 330px;
+                        box-sizing: border-box;
+                        font-family: 'Poppins';
+                        font-weight: 200;
+                        
+                        .page-buttons{
+                            margin-top: 30px;
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+
+                            .btn {
+                                background-color: transparent;
+                                border: none;
+                                color: rgb(194, 134, 24);
+                            }
+                        }
+
+                        .create-account{
+                            text-align: center;
+                            font-size: small;
+                            font-weight: 400;
+
+                            a{
+                                text-decoration: none;
+                                font-weight: 500;
+                                transition: .5s;
+                                color: rgb(194, 134, 24);
+
+                                &:hover{
+                                    text-decoration: underline;
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+
+                        .btn{
+                            background-color: rgb(194, 134, 24);
+                            color: #fff;
+                            transition: .4s ease;
+                            &:hover{
+                                background-color: #181616;
+                                padding: 8px;
+                            }
+                        }
+
+                        .input-field{
+                            display: flex;
+                            flex-direction: column;
+                            position: relative;
+                            padding: 0 10px 0 10px;
+
+                            input, select{
+                                height: 45px;
+                                width: 100%;
+                                background: transparent;
+                                border: none;
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                                outline: none;
+                                margin-bottom: 20px; 
+                                color: #40414a;
+                               
+
+                                &:focus{
+                                    border-bottom: 1px solid rgb(194, 134, 24);
+            
+                                }
+                            }
+                             label{
+                                position: absolute;
+                                top: 10px;
+                                left: 10px;
+                                pointer-events: none;
+                                transition: .5s;
+                            }
+
+                            .input:focus ~ label{
+                                top: -10px;
+                                font-size: 13px;
+                                color: rgb(194, 134, 24);
+                            }
+
+                            .input:valid ~ label{
+                                top: -10px;
+                                font-size: 13px;
+                                color: #5d5076;
+                            }
+     
+                        }
+
+                        
+
+                    }
+                    
+                }
+            }
+
+           
+
+            
+        }
+        
+    }
+
+    @media only screen and (max-width: 768px){
+            .wrapper{
+                padding-top: 90px;
+            }
+    }
+}
+

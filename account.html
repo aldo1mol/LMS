@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css">
+</head>
+<body>
+
+<!-- Loader Page -->
+
+<div id="loader">
+    <img src="img/logo.png">
+    <img class="loading" src="img/loading.gif" alt="loading">
+    <p>Loading...</p>
+</div>
+
+
+    <div class="wrapper">
+        <div class="container main">
+            <div class="row">
+                <div class="col-md-6 side-image">
+            <!--------- image ----------->
+                    <div class="text">
+                        <p>WELCOME TO THE 2025 ANNUAL OHS REFRESHER TRAINING</p>
+                    </div>
+                </div>
+                <div class="col-md-6 right">
+                    <header><img src="img/logo.png" alt="logo"></header>
+                      <form id="account_form" method="POST" onsubmit="validateForm();" class="input-box">
+                        <!-- Page 1 will be user details -->
+                        <div class="form-page" id="page-1">
+                            <div class="input-field">
+                                <input type="text" name="emp_badge_number" class="input" id="emp_badge_number" required autocomplete="off">
+                                <label for="emp_badge_number">Enter Employee/Badge number</label>
+                            </div>
+
+                            <!-- Next button -->
+                             <span class="page-buttons">
+                                <button type="button" class="btn next-btn">Next <i class='bx bx-chevrons-right'></i></button>
+                             </span>
+
+                        </div>
+
+                        <!----------- page 2  ------------>
+                        <div class="form-page" id="page-2" style="display: none;">
+                            <!-- USER DETAILS -->  
+                            <legend>USER DETAILS</legend>                           
+                            <div class="input-field">
+                                <input type="text" name="name" class="input" id="name" required autocomplete="off">
+                                <label for="name">Name</label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="text" name="role" class="input" id="role" required autocomplete="off">
+                                <label for="role">Role</label>
+                            </div>
+                            
+                            <div class="input-field">
+                                <input type="email" name="email" class="input" id="email" required autocomplete="off">
+                                <label for="email">Email</label>
+                            </div>
+                            
+
+                            <span class="page-buttons">
+                                <button type="button" class="btn next-btn">Next <i class='bx bx-chevrons-right'></i></button>
+                                <button type="button" class="btn prev-btn"><i class='bx bx-chevrons-left'></i>Previous</button>
+                            </span>
+
+                        </div>
+
+
+                           <!-- page 3 will be users details -->
+                        <div class="form-page" id="page-3" style="display: none;">
+                                <legend>USER DETAILS</legend>
+                                <div class="input-field">
+                                    <input type="password" name="password" class="input form-control" id="password" required autocomplete="off">
+                                    <label for="password">Password</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" name="confirmPassword" class="input form-control" id="confirmPassword" required autocomplete="off">
+                                    <label for="confirmPassword">Confirm-Password</label>
+                                </div>
+
+                                <span class="page-buttons">
+                                    <button type="button" class="btn next-btn">Next <i class='bx bx-chevrons-right'></i></button>
+                                    <button type="button" class="btn prev-btn"><i class='bx bx-chevrons-left'></i> Previous</button>
+                                </span>
+                        </div>  
+
+
+
+                            <!-- page 4 will be company details -->
+                        <div class="form-page" id="page-4" style="display: none;">
+                                <legend>COMPANY DETAILS</legend>
+                                <div class="input-field">
+                                    <select name="company" id="company">
+                                        <option value="none"></option>
+                                        <option value="AGA">AGA</option>
+                                        <option value="CONTRACTOR">CONTRACTOR</option>
+                                    </select>
+                                    <label for="role">Select Company</label>
+                                </div>
+        
+                                <!-- if contractor is selected -->
+                                <div class="input-field" id="contractorCompanyField">
+                                    <select name="contractor_company" id="contractor_company">
+                                        <option value="none"></option>
+                                        <option value="UMA">UMA</option>
+                                        <option value="RAMOTH">RAMOTH</option>
+                                        <option value="AGAHF">AGAHF</option>
+                                        <option value="SGS">SGS</option>
+                                        <option value="BACHOR & JONAS">BACHOR & JONAS</option>
+                                        <option value="KENZARD">KENZARD</option>
+                                        <option value="T ANKOMAH">T ANKOMAH</option>
+                                        <option value="QUANTUM LC">QUANTUM LC</option>
+                                        <option value="TESLA">TESLA</option>
+                                        <option value="RICH POWER">RICH POWER</option>
+                                        <option value="BOB DOE">BOB DOE</option>
+                                        <option value="FIRE SHIELD">FIRE SHIELD</option>
+                                        <option value="KILON">KILON</option>
+                                        <option value="A.A ENGINEERING">A.A ENGINEERING</option>
+                                        <option value="EPIROC">EPIROC</option>
+                                        <option value="MAGNUM FORCE">MAGNUM FORCE</option>
+                                        <option value="MEGA FORCE">MEGA FORCE</option>
+
+                                    </select>                            
+                                    <label for="contractor-company">Select Contractor company</label>
+                                </div>
+
+                                <div class="input-field" id="departmentField">
+                                    <select name="department" id="department">
+                                        <option value="none"></option>
+                                        <option value="Mining">Mining</option>
+                                        <option value="MTS">MTS</option>
+                                        <option value="OHS">OHS</option>
+                                        <option value="ENVIRONMENT">ENVIRONMENT</option>
+                                        <option value="SUSTAINABILITY">SUSTAINABILITY</option>
+                                        <option value="Capital Project">Capital Project</option>
+                                        <option value="Geology">Geology</option>
+                                        <option value="Finance & Commercial">Finance & Commercial</option>
+                                        <option value="Human Resource(HR)">Human Resource(HR)</option>
+                                        <option value="Engineering">Engineering</option>
+                                        <option value="Digital Technology">Digital Technology</option>
+
+                                    </select>                            
+                                    <label for="Department">Department</label>
+                                </div>     
+                                    
+                                    
+                                    <center>
+                                    <button type="submit" class="btn mt-3 w-100 mb-3">Create Account</button>
+                                    <span class="create-account mt-5">Already have an account? <a href="index.php">login</a></span>   
+                                    </center>
+
+                                    <span class="page-buttons">
+                                        <button type="button" class="btn prev-btn"><i class='bx bx-chevrons-left'></i> Previous</button>
+                                    </span>
+                        </div>                                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/jquery-3.6.4.js"></script>
+<script src="js/loading.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>
