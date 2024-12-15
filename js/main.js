@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to load content dynamically
   const loadPage = async (page) => {
     try {
-      const response = await fetch(`pages/${page}.html`); // Fetch the corresponding PHP file
+      const response = await fetch(`${page}.html`); // Fetch the corresponding PHP file
       if (response.ok) {
         const content = await response.text();
         mainContent.innerHTML = content; // Load the content into the main area
