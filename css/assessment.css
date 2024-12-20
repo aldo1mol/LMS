@@ -1,0 +1,62 @@
+.assessment{
+     margin-left: 35px;
+     padding: 10px;
+     display: flex;
+     flex-wrap: wrap;
+     height: 50px;
+     height: 100%;
+     gap: 15px;
+     
+}
+
+.mod{
+    width: 280px;
+    border: 1px solid;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.mod p{
+    margin: 10px 0;
+}
+
+.mod .scores{
+    margin-top: 10px;
+    display: flex;
+
+    justify-content: space-evenly;
+}
+
+
+/* Container for the circular progress bar */
+.mod .right .progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    background-color: #f4f4f4;
+}
+
+/* Circular progress bar */
+.mod .right .progress-container .progress-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #4caf50 calc(var(--progress, 75) * 1%), /* Dynamic progress color */
+        #ddd calc(var(--progress, 75) * 1%)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Percentage value at the center */
+.mod .right .progress-container .progress-circle .progress-value {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
