@@ -15,6 +15,14 @@
 
     <!-- dashboard -->
     <link rel="stylesheet" href="css/dashboard.css">
+
+    <!-- Account Settings -->
+    <link rel="stylesheet" href="css/profile.css">
+
+    <link rel="stylesheet" href="css/assessment.css">
+
+
+
 </head>
 <body>
 
@@ -68,12 +76,12 @@
                     
                     <a href="#" class="sidebar-link" data-page="courses">
                         <i class="ri-presentation-fill"></i>
-                        <span>Training</span>
+                        <span>Assigned Courses</span>
                     </a>
 
-                    <a href="#" class="sidebar-link" data-page="assignments">
+                    <a href="#" class="sidebar-link" data-page="assessments">
                         <i class="ri-file-text-fill"></i>
-                        <span>Assignments</span>
+                        <span>My Assessements</span>
                     </a>
 
                     <a href="#" class="sidebar-link" data-page="E&Q">
@@ -81,10 +89,10 @@
                         <span>Exams & Quizes</span>
                     </a>
 
-                    <a href="#" class="sidebar-link" data-page="Schedules">
+                    <!-- <a href="#" class="sidebar-link" data-page="Schedules">
                         <i class="ri-calendar-event-line"></i>
                         <span>Course Schedules</span>
-                    </a>
+                    </a> -->
 
                    
                  </div>
@@ -94,9 +102,9 @@
                  <h3 class="sidebar-title">SETTINGS</h3>
 
                  <div class="sidebar-list">
-                    <a href="#" class="sidebar-link" data-page="settings">
+                    <a href="#" class="sidebar-link" data-page="profile">
                        <i class="ri-settings-3-fill"></i>
-                       <span>Settings</span>
+                       <span>Profile</span>
                     </a>
 
                     <a href="#" class="sidebar-link" data-page="Messages">
@@ -131,8 +139,17 @@
      <main class="main container" id="main">
         <h1>Pages will be here</h1>
      </main>
-
+   
      <script src="js/main.js"></script>
      <script src="js/loading.js"></script>
+     <script>
+      function navigateToPage(pageToShow, pageToHide) {
+         // Hide the current page
+         document.getElementById(pageToHide).style.display = 'none';
+         // Show the target page
+         document.getElementById(pageToShow).style.display = 'block';
+      }
+
+     </script>
 </body>
 </html>
